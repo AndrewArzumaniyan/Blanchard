@@ -1,0 +1,220 @@
+@import "fonts";
+@import "global";
+@import "vars";
+@import "libs";
+//========================================================================================================================================================
+
+.header {
+  position: fixed;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  z-index: 10;
+
+  &__up {
+    background-color: #000;
+  }
+
+  &__up-body {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    @extend %os-semibold;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 62px;
+    }
+  }
+
+  &__item-link {
+  }
+
+  &__sign {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      background: url("../img/arrow-in-box.svg") center/contain no-repeat;
+      top: 5px;
+      left: 0;
+    }
+  }
+
+  &__down {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  &__form {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__selects {
+    display: flex;
+  }
+
+  &__select {
+  }
+
+  &__search {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  &__search-btn {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background: url("../img/search.svg") center/contain no-repeat;
+    top: 3px;
+    left: 0;
+  }
+
+  &__search-area {
+    background-color: transparent;
+    padding: 0 0 6px 0;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 218px;
+    color: inherit;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}
+
+.choices {
+  margin-bottom: 0;
+  &:not(:last-child) {
+    margin-right: 96px;
+  }
+}
+.choices[data-type*="select-one"]::after {
+  border: none;
+  margin-top: 0;
+  width: 15px;
+  height: 13px;
+  background-image: url("../img/arrow-down.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  top: calc(50% - 5px);
+  right: 0;
+}
+.choices[data-type*="select-one"].is-open::after {
+  z-index: 10;
+  border: none;
+  margin: 0;
+  background-image: url("../img/arrow-down.svg");
+  transform: rotate(180deg);
+}
+.choices__list--single {
+  display: inline-block;
+  padding: 0px 25px 0px 0px;
+  width: 100%;
+}
+.choices__inner {
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choices__placeholder {
+  opacity: 1;
+  font-size: 18px;
+}
+
+.choices__list--dropdown {
+  width: 300px;
+  height: 300px;
+  padding: 40px 40px 0 40px;
+  border: none;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  top: 57px;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: transparent;
+}
+.choices__item--selectable {
+  // background: url("../img/choices-1.1.jpg") 0 0 no-repeat;
+}
+
+.main {
+  position: relative;
+  z-index: 0;
+}
+.hero {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/hero-bg-1.jpg") 0 0 no-repeat;
+    animation: scaleimg 20s infinite ease-in-out;
+  }
+  &__container {
+    padding-top: 230px;
+    padding-bottom: 120px;
+    padding-right: 1000px;
+  }
+}
+.hero__title {
+  @extend %os-bold;
+  font-size: 72px;
+  line-height: 98px;
+}
+
+.hero__description {
+  @extend %os-bold;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 90px;
+}
+
+.hero__btn {
+  font-size: 18px;
+  padding: 22.5px 35px;
+  background: #9d5cd0;
+  border-radius: 100px;
+}
+
+//========================================================================================================================================================
+@keyframes scaleimg {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+//========================================================================================================================================================
+@import "media";
