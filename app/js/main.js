@@ -7,4 +7,25 @@ document.addEventListener('DOMContentLoaded', function () {
       itemSelectText: '',
     });
   });
+
+  new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      //pause 
+      delay: 3000,
+      //Finish on last slide
+      stopOnLastSlide: false,
+      //Turn of after using
+      disableOnInteraction: true,
+    },
+    effect: 'fade',
+
+    //additional fade
+    fadeEffect: {
+      //Parallel
+      //change the opacity
+      crossFade: true,
+    },
+    speed: 2500,
+  });
 });

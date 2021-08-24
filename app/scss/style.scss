@@ -1,7 +1,7 @@
 @import "fonts";
-@import "global";
 @import "vars";
 @import "libs";
+@import "global";
 //========================================================================================================================================================
 
 .header {
@@ -163,15 +163,15 @@
   position: relative;
   overflow: hidden;
 }
-.hero__bg {
-  background: url("../img/hero-bg-1.jpg") center/cover no-repeat;
+.swiper-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
   height: 100%;
-  z-index: -5;
-  animation: scaleimg 20s ease-in-out infinite;
+  animation: scaleimg infinite 20s ease-in-out;
 }
 .hero {
   color: #fff;
