@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const anchors = document.querySelectorAll('a[href^="#"]');
+
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockId = anchor.getAttribute('href')
+      document.querySelector('' + blockId).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    })
+  });
+
   const elements = document.querySelectorAll('.header__select');
   elements.forEach(function (element) {
     const choices = new Choices(element, {
