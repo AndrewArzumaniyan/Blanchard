@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   new Swiper('.gallery__slider-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 40,
     slidesPerColumn: 2,
     slidesToScroll: 1,
     slidesPerGroup: 3,
@@ -43,4 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
       type: 'fraction',
     },
   });
+
 });
