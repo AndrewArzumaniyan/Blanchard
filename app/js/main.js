@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   new Swiper('.gallery__slider-container', {
-    slidesPerView: 1,
+    slidesPerView: 3,
     spaceBetween: 40,
     slidesPerColumn: 2,
     slidesToScroll: 1,
@@ -57,4 +57,15 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+
+
+  tippy('#tooltip-1', {
+    content: 'Tooltip',
+  });
+  tippy('#tooltip-2', {
+    content: 'Tooltip',
+  });
+  tippy('#tooltip-3', {
+    content: 'Tooltip',
+  });
 });
