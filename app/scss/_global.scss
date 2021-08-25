@@ -1,54 +1,40 @@
-html {
+* {
   box-sizing: border-box;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-}
-
-img {
-  width: 100%;
-}
-
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  margin: 0;
+  padding: 0;
+}
 p {
   margin: 0;
   padding: 0;
-  font-size: inherit;
 }
-
-button {
-  padding: 0;
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+ol,
+ul,
+li {
   margin: 0;
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
+  padding: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
 }
 
 body {
   @extend %os-regular;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 .container {

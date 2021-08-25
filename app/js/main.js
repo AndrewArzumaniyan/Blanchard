@@ -4,28 +4,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const choices = new Choices(element, {
       searchEnabled: false,
       placeholder: true,
-      itemSelectText: '',
+      itemSelectText: 'ВЫбрать',
     });
   });
 
-  new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper-container', {
     loop: true,
     autoplay: {
-      //pause 
-      delay: 3000,
-      //Finish on last slide
-      stopOnLastSlide: false,
-      //Turn of after using
-      disableOnInteraction: true,
+      delay: 2000,
+      disableOnInteraction: false,
     },
+    speed: 2000,
+    simulateTouch: false,
     effect: 'fade',
-
-    //additional fade
     fadeEffect: {
-      //Parallel
-      //change the opacity
       crossFade: true,
     },
-    speed: 2500,
   });
 });
