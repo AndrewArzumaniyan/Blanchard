@@ -43,3 +43,10 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
+.main {
+  font-size: 16px;
+}
+.title {
+  @extend %os-regular;
+  font-size: 48px;
+}
