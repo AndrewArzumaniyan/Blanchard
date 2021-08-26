@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const choices = new Choices(element, {
       searchEnabled: false,
       placeholder: true,
-      itemSelectText: 'ВЫбрать',
+      itemSelectText: 'Выбрать',
     });
   });
 
   const element = document.querySelector('.gallery__select');
   const choices = new Choices(element, {
     searchEnabled: false,
-    itemSelectText: 'ВЫбрать',
+    itemSelectText: 'Выбрать',
   });
 
   new Swiper('.hero__slider-container', {
