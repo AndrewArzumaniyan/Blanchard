@@ -48,8 +48,22 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesToScroll: 1,
     slidesPerGroup: 3,
     navigation: {
-      nextEl: '.gallery__slider-button-next',
-      prevEl: '.gallery__slider-button-prev',
+      nextEl: '.slider-button-next',
+      prevEl: '.slider-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+  });
+  new Swiper('.publications__slider-container', {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    slidesToScroll: 1,
+    slidesPerGroup: 3,
+    navigation: {
+      nextEl: '.slider-button-next',
+      prevEl: '.slider-button-prev',
     },
     pagination: {
       el: '.swiper-pagination',
@@ -59,13 +73,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  tippy('#tooltip-1', {
-    content: 'Tooltip',
+  tippy('#tooltip1', {
+    content: 'Пример современных тенденций - современная методология разработки ',
+    theme: 'background',
   });
-  tippy('#tooltip-2', {
-    content: 'Tooltip',
+  tippy('#tooltip2', {
+    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  ',
+    theme: 'background',
   });
-  tippy('#tooltip-3', {
-    content: 'Tooltip',
+  tippy('#tooltip3', {
+    content: 'В стремлении повысить качество ',
+    theme: 'background',
   });
+
+  new Swiper('.projects__slider-container', {
+    slidesPerView: 3,
+    navigation: {
+      nextEl: '.projects__slider-btn-next',
+      prevEl: '.projects__slider-btn-prev',
+    },
+  });
+
+  ymaps.ready(init);
+  function init() {
+
+    // Создание карты.
+    var myMap = new ymaps.Map("map", {
+      center: [55.75527037630038, 37.61168061256219],
+      zoom: 14,
+      controls: ['zoomControl', 'geolocationControl'],
+    });
+
+    // var myPlacemark = new ymaps.Placemark([55.75527037630038, 37.61168061256219], {}, {
+    //   iconLayout: 'default#image',
+    //   iconImageHref: 'img/icon.svg',
+    //   iconImageSize: [30, 42],
+    //   iconImageOffset: [-3, -42],
+    // });
+
+    // // Размещение геообъекта на карте.
+    // myMap.geoObjects.add(myPlacemark);
+  }
 });
