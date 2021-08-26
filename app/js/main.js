@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
   new Swiper('.gallery__slider-container', {
     slidesPerView: 3,
     spaceBetween: 40,
-    slidesPerColumn: 2,
     slidesToScroll: 1,
     slidesPerGroup: 3,
+    slidesPerColumn: 2,
     navigation: {
       nextEl: '.slider-button-next',
       prevEl: '.slider-button-prev',
