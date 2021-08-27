@@ -657,7 +657,7 @@
     &:not(:last-child) {
       margin-right: 50px;
     }
-    &.active {
+    &.is-active {
       border: 2px solid #7943a4;
       border-radius: 50%;
     }
@@ -680,13 +680,18 @@
 .catalog__inner {
   display: none;
 }
-.active {
+.is-active {
   display: flex;
 }
+.catalog__info-some,
 .catalog__info {
   flex: 0 1 750px;
   margin-right: 50px;
 }
+.catalog__info {
+  display: none;
+}
+
 .catalog__image {
   margin-bottom: 30px;
 }
@@ -815,7 +820,30 @@
 .catalog__accordion-info--description {
   max-width: 275px;
   line-height: 22px;
-  margin-bottom: 5px;
+}
+
+.catalog__accordion-item {
+  a {
+    &.active {
+      color: #7943a4;
+    }
+  }
+}
+.faded {
+  opacity: 0;
+  transition: all 1s;
+}
+.faded.in {
+  opacity: 1;
+  transition: all 1s;
+}
+.active {
+  display: block;
+}
+
+.catalog__accordion-info--link {
+  margin-top: 15px;
+  color: #9d5cd0;
 }
 //========================================================================================================================================================
 //========================================================================================================================================================

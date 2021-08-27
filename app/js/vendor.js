@@ -10,11 +10,25 @@ $(document).ready(function () {
   });
 
   $('.catalog').on('click', '.catalog__points a', function () {
-    $('.catalog__points a').removeClass('active');
+    $('.catalog__points a').removeClass('is-active');
+    $(this).addClass('is-active');
+    let href = $(this).attr('href');
+    console.log(href);
+    $('.catalog__inner').removeClass('is-active').removeClass('in');
+    $(href).addClass('is-active');;
+    function fade() {
+      $(href).addClass('in')
+    }
+    setTimeout(fade, 300);
+    return false;
+  });
+
+  $('.catalog').on('click', '.catalog__accordion-item a', function () {
+    $('.catalog__accordion-item a').removeClass('active');
     $(this).addClass('active');
     let href = $(this).attr('href');
     console.log(href);
-    $('.catalog__inner').removeClass('active').removeClass('in');
+    $('.catalog__info').removeClass('active').removeClass('in');
     $(href).addClass('active');;
     function fade() {
       $(href).addClass('in')
