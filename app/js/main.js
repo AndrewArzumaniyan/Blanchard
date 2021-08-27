@@ -82,20 +82,40 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   new Swiper('.gallery__slider-container', {
-    slidesPerView: 3,
+    slidesPerView: 1,
+
+    grid: {
+      rows: 1,
+      fill: "row"
+    },
     spaceBetween: 40,
-    slidesToScroll: 1,
-    slidesPerGroup: 3,
-    slidesPerColumn: 2,
+    pagination: {
+      el: '.gallery .swiper-pagination',
+      type: 'fraction',
+    },
     navigation: {
       nextEl: '.slider-button-next',
       prevEl: '.slider-button-prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
+    breakpoints: {
+      441: {
+        slidesPerView: 2,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 30
+      },
+
+      1200: {
+        slidesPerView: 3,
+        grid: {
+          rows: 2
+        },
+        spaceBetween: 50
+      }
     },
   });
+
   new Swiper('.publications__slider-container', {
     slidesPerView: 3,
     spaceBetween: 40,
