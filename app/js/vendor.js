@@ -9,7 +9,22 @@ $(document).ready(function () {
     $(this).toggleClass('active').next().slideDown(300);
   });
 
+  $('.catalog').on('click', '.catalog__points a', function () {
+    $('.catalog__points a').removeClass('active');
+    $(this).addClass('active');
+    let href = $(this).attr('href');
+    console.log(href);
+    $('.catalog__inner').removeClass('active').removeClass('in');
+    $(href).addClass('active');;
+    function fade() {
+      $(href).addClass('in')
+    }
+    setTimeout(fade, 300);
+    return false;
+  });
+
   $('.events__btn').click(function (event) {
     $('.events__inner').toggleClass('active');
   });
+
 });

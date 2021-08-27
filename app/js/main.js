@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   new Swiper('.gallery__slider-container', {
     slidesPerView: 1,
-
+    // slidesPerColumn: 2,
     grid: {
       rows: 1,
       fill: "row"
