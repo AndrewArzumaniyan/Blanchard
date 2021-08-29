@@ -17,8 +17,17 @@
     <div class="header__top">
       <div class="container">
         <div class="header__row">
+          <div class="header__burger ">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="header__logo">
-            <a href=""><img src="img/logo.svg" alt=""></a>
+            <a class="header__logo-img" href=""><img src="img/logo.svg" alt=""></a>
+            <div class="burger__search">
+              <a href="#" class="burger__search-btn"></a>
+              <input type="text">
+            </div>
           </div>
           <nav class="header__navbar">
             <ul class="header__list">
@@ -43,11 +52,12 @@
               <li class="header__item">
                 <a href="#contacts" class="header__link">Контакты</a>
               </li>
+              <li class="header__sign">
+                <a href="#">Войти</a>
+              </li>
             </ul>
           </nav>
-          <div class="header__sign">
-            <a href="#">Войти</a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -226,16 +236,25 @@
         <div class="hero__slider-wrapper swiper-wrapper">
           <div class="hero__slider-slide swiper-slide">
             <picture>
+              <source srcset="img/hero-bg-1(320).jpg" media="(max-width: 441px)">
+              <source srcset="img/hero-bg-1(768).jpg" media="(max-width: 769px)">
+              <source srcset="img/hero-bg-1(1024).jpg" media="(max-width: 1025px)">
               <img src="img/hero-bg-1.jpg" alt="">
             </picture>
           </div>
           <div class="hero__slider-slide swiper-slide">
             <picture>
+              <source srcset="img/hero-bg-2(320).jpg" media="(max-width: 441px)">
+              <source srcset="img/hero-bg-2(768).jpg" media="(max-width: 769px)">
+              <source srcset="img/hero-bg-2(1024).jpg" media="(max-width: 1025px)">
               <img src="img/hero-bg-2.jpg" alt="">
             </picture>
           </div>
           <div class="hero__slider-slide swiper-slide">
             <picture>
+              <source srcset="img/hero-bg-3(320).jpg" media="(max-width: 441px)">
+              <source srcset="img/hero-bg-3(768).jpg" media="(max-width: 769px)">
+              <source srcset="img/hero-bg-3(1024).jpg" media="(max-width: 1025px)">
               <img src="img/hero-bg-3.jpg" alt="">
             </picture>
           </div>
@@ -276,7 +295,7 @@
       <div class="container">
         <div class="gallery__inner">
           <div class="gallery__sidebar">
-            <h2 class="gallery__title title">Галлерея</h2>
+            <h2 class="gallery__title title">Галерея</h2>
             <form action="#" class="gallery__form">
               <h4 class="gallery__form-title">Фильтр:</h4>
               <select name="" id="" class="gallery__select">
@@ -290,7 +309,7 @@
           <div class="gallery__slider-container swiper-container">
             <div class="slider-navigation">
               <div class="slider-button-prev"></div>
-              <div class="swiper-pagination"></div>
+              <div class="slider-pagination"></div>
               <div class="slider-button-next"></div>
             </div>
             <div class="gallery__slider-wrapper swiper-wrapper">
@@ -1286,6 +1305,7 @@
           </div>
         </div>
       </div>
+      <div id="events"></div>
     </section>
 
     <section class="events">
@@ -1370,20 +1390,6 @@
               <a href="#" class="events__info-btn">Подробнее</a>
             </div>
           </div>
-
-          <!-- <div class="events__elem">
-            <span class="events__bg events__bg-4"></span>
-            <div class="events__info">
-              <p class="events__description">
-                
-              </p>
-              <h3 class="events__info-title"></h3>
-              <p class="events__info-description">
-                
-              </p>
-              <a href="#" class="events__info-btn">Подробнее</a>
-            </div>
-          </div> -->
         </div>
         <div class="events__btn">
           <span>Все события</span>
@@ -1474,6 +1480,7 @@
 
               </div>
               <div class="publications__price-box">
+                <h5>Цена</h5>
                 <label for="" class="publications__price">
                   <span>От</span><input type="text" value="50">
                   <span>до</span><input type="text" value="25 000"><span>руб</span>
@@ -1485,7 +1492,7 @@
           <div class="publications__slider-container swiper-container">
             <div class="slider-navigation">
               <div class="slider-button-prev"></div>
-              <div class="swiper-pagination"></div>
+              <div class="slider-pagination"></div>
               <div class="slider-button-next"></div>
             </div>
             <div class="publications__slider-wrapper swiper-wrapper">
@@ -1630,32 +1637,30 @@
       <div class="container">
         <h2 class="contacts__title title">Контакты</h2>
       </div>
-      <div class="contacts__inner">
-        <div class="contacts__aside">
-          <div class="contacts__row">
-            <div class="contacts__box">
-              <h3 class="contacts__aside-title">Шоурум №4</h3>
-              <div class="contacts__aside-info">Леонтьевский переулок, дом 5/1</div>
-              <form action="#" class="contacts__form">
-                <h4 class="contacts__form-title">Заказать обратный звонок</h4>
+      <div class="contacts__row">
+        <div class="container contacts__container">
+          <div class="contacts__aside">
+            <h3 class="contacts__aside-title">Шоурум №4</h3>
+            <div class="contacts__aside-info">Леонтьевский переулок, дом 5/1</div>
+            <form action="#" class="contacts__form">
+              <h4 class="contacts__form-title">Заказать обратный звонок</h4>
 
-                <input type="name" placeholder="Имя*" class="contacts__form-input">
-                <input type="tel" placeholder="Телефон*" class="contacts__form-input">
+              <input type="name" placeholder="Имя*" class="contacts__form-input">
+              <input type="tel" placeholder="Телефон*" class="contacts__form-input">
 
-                <button class="contacts__btn" type="submit">Заказать</button>
-              </form>
+              <button class="contacts__btn" type="submit">Заказать</button>
+            </form>
 
-              <div class="contacts__socials">
-                <h4 class="contacts__socials-title">Связаться в один клик</h4>
-                <a href="" class="contacts__link"><img src="img/whatsapp.svg" alt=""></a>
-                <a href="" class="contacts__link"><img src="img/telegram.svg" alt=""></a>
-              </div>
+            <div class="contacts__socials">
+              <h4 class="contacts__socials-title">Связаться в один клик</h4>
+              <a href="" class="contacts__link"><img src="img/whatsapp.svg" alt=""></a>
+              <a href="" class="contacts__link"><img src="img/telegram.svg" alt=""></a>
             </div>
           </div>
-        </div>
 
-        <div class="contacts__map">
-          <div class="map" id="map" style="width: 1200px;height: 764px;"></div>
+          <div class="contacts__map" id="map">
+
+          </div>
         </div>
       </div>
     </section>
@@ -1676,6 +1681,27 @@
     </div>
   </footer>
 
+
+
+
+  <!-- <div class="contacts__box">
+    <h3 class="contacts__aside-title">Шоурум №4</h3>
+    <div class="contacts__aside-info">Леонтьевский переулок, дом 5/1</div>
+    <form action="#" class="contacts__form">
+      <h4 class="contacts__form-title">Заказать обратный звонок</h4>
+
+      <input type="name" placeholder="Имя*" class="contacts__form-input">
+      <input type="tel" placeholder="Телефон*" class="contacts__form-input">
+
+      <button class="contacts__btn" type="submit">Заказать</button>
+    </form>
+
+    <div class="contacts__socials">
+      <h4 class="contacts__socials-title">Связаться в один клик</h4>
+      <a href="" class="contacts__link"><img src="img/whatsapp.svg" alt=""></a>
+      <a href="" class="contacts__link"><img src="img/telegram.svg" alt=""></a>
+    </div>
+  </div> -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>

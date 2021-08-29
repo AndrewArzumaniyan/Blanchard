@@ -83,14 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   new Swiper('.gallery__slider-container', {
     slidesPerView: 1,
-    // slidesPerColumn: 2,
     grid: {
       rows: 1,
       fill: "row"
     },
     spaceBetween: 40,
     pagination: {
-      el: '.gallery .swiper-pagination',
+      el: '.gallery .slider-pagination',
       type: 'fraction',
     },
     navigation: {
@@ -126,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.slider-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.slider-pagination',
       type: 'fraction',
     },
   });
@@ -152,26 +151,74 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.projects__slider-btn-next',
       prevEl: '.projects__slider-btn-prev',
     },
+    breakpoints: {
+      319: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      800: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+
+      1442: {
+        slidesPerView: 3,
+      }
+    },
   });
 
   ymaps.ready(init);
   function init() {
+    const myMap = new ymaps.Map(
+      "map",
+      {
+        center: [55.75846806898367, 37.60108849999989],
+        zoom: 14,
+        controls: ['geolocationControl', 'zoomControl']
+      },
+      {
+        suppressMapOpenBlock: true,
+        geolocationControlSize: "large",
+        geolocationControlPosition: { top: "330px", right: "20px" },
+        geolocationControlFloat: 'none',
+        zoomControlSize: "small",
+        zoomControlFloat: "none",
+        zoomControlPosition: { top: "250px", right: "20px" }
+      }
+    );
 
-    // Создание карты.
-    var myMap = new ymaps.Map("map", {
-      center: [55.75527037630038, 37.61168061256219],
-      zoom: 14,
-      controls: ['zoomControl', 'geolocationControl'],
-    });
+    const myPlacemark = new ymaps.Placemark(
+      [55.75846806898367, 37.60108849999989],
+      // {
+      //   iconLayout: "default#image",
+      //   iconImageHref: "img/map-dot.svg",
+      //   iconImageSize: [20, 20],
+      //   iconImageOffset: [-10, -20],
+      // }
+    );
 
-    // var myPlacemark = new ymaps.Placemark([55.75527037630038, 37.61168061256219], {}, {
-    //   iconLayout: 'default#image',
-    //   iconImageHref: 'img/icon.svg',
-    //   iconImageSize: [30, 42],
-    //   iconImageOffset: [-3, -42],
-    // });
-
-    // // Размещение геообъекта на карте.
-    // myMap.geoObjects.add(myPlacemark);
+    myMap.geoObjects.add(myPlacemark);
   }
+
+  // !Header-burger
+  let burgerButton = document.querySelector('.header__burger');
+  let burgerContent = document.querySelector('.header__navbar');
+  let bodyLock = document.querySelector('body');
+  let searchButton = document.querySelector('.burger__search-btn');
+  let main = document.querySelector('.main');
+
+  burgerButton.addEventListener('click', function () {
+    burgerButton.classList.toggle('burger-active');
+    burgerContent.classList.toggle('navbar-active');
+    bodyLock.classList.toggle('lock');
+  });
+  searchButton.addEventListener('click', function () {
+    document.querySelector('.burger__search').classList.add('search-active');
+    burgerButton.classList.add('none');
+    document.querySelector('.header__logo-img').classList.add('none');
+  });
+  main.addEventListener('click', function (e) {
+    document.querySelector('.burger__search').classList.removeClass('search-active');
+  });
 });

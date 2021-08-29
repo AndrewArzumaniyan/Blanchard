@@ -66,3 +66,6 @@ body {
   @extend %os-regular;
   font-size: 48px;
 }
+.swiper-container {
+  overflow: hidden;
+}
