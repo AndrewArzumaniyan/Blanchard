@@ -31,7 +31,11 @@
     margin-right: 65px;
   }
 }
+.header__search-burger {
+  display: none;
+}
 .header__sign {
+  // margin-left: calc(220 / 1600 * 100%);
   margin-left: 220px;
   position: relative;
   a {
@@ -64,6 +68,7 @@
 .header__search {
   position: relative;
   padding-left: 30px;
+  z-index: 20;
   &-btn {
     background: url("../img/search.svg") 0 0 / contain no-repeat;
     position: absolute;
@@ -320,7 +325,7 @@
 .hero__body {
   padding-top: 235px;
   padding-bottom: 125px;
-  width: 600px;
+  max-width: 660px;
   @extend %os-bold;
 }
 .hero__title {
@@ -351,7 +356,7 @@
   margin-bottom: 20px;
 }
 .about__description {
-  width: 1080px;
+  max-width: 1080px;
   line-height: 32px;
 }
 //========================================================================================================================================================
@@ -638,7 +643,7 @@
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 35px;
-  width: 1080px;
+  max-width: 1080px;
 }
 .catalog__inner {
   display: none;
@@ -648,7 +653,7 @@
 }
 .catalog__info-some,
 .catalog__info {
-  flex: 0 1 750px;
+  width: calc(750 / 1600 * 100%);
   margin-right: 50px;
 }
 .catalog__info {
@@ -751,6 +756,7 @@
   cursor: pointer;
   font-size: 16px;
   line-height: 32px;
+  margin-right: 15px;
 }
 .catalog__accordion-row {
   padding-top: 37px;
@@ -931,7 +937,7 @@
   display: flex;
 }
 .publications__sidebar {
-  flex: 0 1 calc(280 / 1600 * 100%);
+  width: calc(280 / 1600 * 100%);
   margin-right: 170px;
 }
 .publications__title {

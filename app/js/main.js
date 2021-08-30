@@ -205,7 +205,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let burgerButton = document.querySelector('.header__burger');
   let burgerContent = document.querySelector('.header__navbar');
   let bodyLock = document.querySelector('body');
-  let searchButton = document.querySelector('.burger__search-btn');
+  let searchButton = document.querySelector('.burger__search-link');
+  let searchContent = document.querySelector('.header__search-burger');
   let main = document.querySelector('.main');
 
   burgerButton.addEventListener('click', function () {
@@ -213,12 +214,9 @@ document.addEventListener('DOMContentLoaded', function () {
     burgerContent.classList.toggle('navbar-active');
     bodyLock.classList.toggle('lock');
   });
+
   searchButton.addEventListener('click', function () {
-    document.querySelector('.burger__search').classList.add('search-active');
-    burgerButton.classList.add('none');
-    document.querySelector('.header__logo-img').classList.add('none');
-  });
-  main.addEventListener('click', function (e) {
-    document.querySelector('.burger__search').classList.removeClass('search-active');
+    searchContent.classList.add('search-active');
+    document.querySelector('.burger__search-input').classList.add('search-active');
   });
 });
