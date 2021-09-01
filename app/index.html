@@ -15,48 +15,59 @@
 <body>
   <header class="header">
     <div class="header__top">
-      <div class="container">
-        <div class="header__row">
-          <div class="header__burger ">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="container header__top-container">
+        <div class="header__wrapper">
+          <div class="header__row">
+            <div class="header__burger ">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="header__logo">
+              <a class="header__logo-img" href=""><img src="img/logo.svg" alt=""></a>
+            </div>
+            <nav class="header__navbar">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a href="#about" class="header__link">О нас</a>
+                </li>
+                <li class="header__item">
+                  <a href="#gallery" class="header__link">Галерея</a>
+                </li>
+                <li class="header__item">
+                  <a href="#catalog" class="header__link">Каталог</a>
+                </li>
+                <li class="header__item">
+                  <a href="#events" class="header__link">События</a>
+                </li>
+                <li class="header__item">
+                  <a href="#publications" class="header__link">Издания</a>
+                </li>
+                <li class="header__item">
+                  <a href="#projects" class="header__link">Проекты</a>
+                </li>
+                <li class="header__item">
+                  <a href="#contacts" class="header__link">Контакты</a>
+                </li>
+                <li class="header__sign">
+                  <a href="#">Войти</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="header__logo">
-            <a class="header__logo-img" href=""><img src="img/logo.svg" alt=""></a>
+          <div class="header-top__search-box">
+
+            <input class="header-top__input" type="text">
+
+            <div class="header-top__search-btn">
+              <span class="header-top__btn header-top__search-icon"></span>
+            </div>
+
+            <div class="header-top__cancel-btn">
+              <span class="header-top__btn header-top__close-icon"></span>
+            </div>
+
           </div>
-          <nav class="header__navbar">
-            <ul class="header__list">
-              <li class="header__item">
-                <a href="#about" class="header__link">О нас</a>
-              </li>
-              <li class="header__item">
-                <a href="#gallery" class="header__link">Галерея</a>
-              </li>
-              <li class="header__item">
-                <a href="#catalog" class="header__link">Каталог</a>
-              </li>
-              <li class="header__item">
-                <a href="#events" class="header__link">События</a>
-              </li>
-              <li class="header__item">
-                <a href="#publications" class="header__link">Издания</a>
-              </li>
-              <li class="header__item">
-                <a href="#projects" class="header__link">Проекты</a>
-              </li>
-              <li class="header__item">
-                <a href="#contacts" class="header__link">Контакты</a>
-              </li>
-              <li class="header__sign">
-                <a href="#">Войти</a>
-              </li>
-            </ul>
-          </nav>
-          <form action="#" class="header__search header__search-burger ">
-            <img class="burger__search-link" src="img/search.svg" alt="">
-            <input type="text" class="header__search-input burger__search-input">
-          </form>
         </div>
       </div>
     </div>
@@ -235,7 +246,7 @@
         <div class="hero__slider-wrapper swiper-wrapper">
           <div class="hero__slider-slide swiper-slide">
             <picture>
-              <source srcset="img/hero-bg-1(320).jpg" media="(max-width: 441px)">
+              <source srcset="img/hero-bg-1(320).jpg" media="(max-width: 500px)">
               <source srcset="img/hero-bg-1(768).jpg" media="(max-width: 769px)">
               <source srcset="img/hero-bg-1(1024).jpg" media="(max-width: 1025px)">
               <img src="img/hero-bg-1.jpg" alt="">
@@ -243,7 +254,7 @@
           </div>
           <div class="hero__slider-slide swiper-slide">
             <picture>
-              <source srcset="img/hero-bg-2(320).jpg" media="(max-width: 441px)">
+              <source srcset="img/hero-bg-2(320).jpg" media="(max-width: 500px)">
               <source srcset="img/hero-bg-2(768).jpg" media="(max-width: 769px)">
               <source srcset="img/hero-bg-2(1024).jpg" media="(max-width: 1025px)">
               <img src="img/hero-bg-2.jpg" alt="">
@@ -251,7 +262,7 @@
           </div>
           <div class="hero__slider-slide swiper-slide">
             <picture>
-              <source srcset="img/hero-bg-3(320).jpg" media="(max-width: 441px)">
+              <source srcset="img/hero-bg-3(320).jpg" media="(max-width: 500px)">
               <source srcset="img/hero-bg-3(768).jpg" media="(max-width: 769px)">
               <source srcset="img/hero-bg-3(1024).jpg" media="(max-width: 1025px)">
               <img src="img/hero-bg-3.jpg" alt="">
@@ -313,76 +324,148 @@
             </div>
             <div class="gallery__slider-wrapper swiper-wrapper">
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-1.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-1.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-1.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-2.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-2.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-2.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-3.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-3.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-3.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-4.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-4.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-4.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-5.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-5.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-5.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-6.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-6.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-6.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-7.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-7.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-7.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-8.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-8.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-8.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-9.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-9.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-9.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-10.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-10.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-10.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-11.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-11.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-11.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-12.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-12.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-12.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-13.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-13.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-13.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-14.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-14.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-14.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-15.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-15.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-15.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-16.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-16.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-16.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-17.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-17.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-17.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-18.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-18.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-18.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-19.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-19.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-19.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-20.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-20.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-20.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-21.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-21.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-21.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-22.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-22.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-22.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-23.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-23.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-23.jpg" alt="">
+                </picture>
               </a>
               <a href="#" class="gallery__slider-slide swiper-slide">
-                <img class="gallery__slider-image" src="img/gallery-slider-24.jpg" alt="">
+                <picture>
+                  <source srcset="img/gallery-slider(320)-24.jpg" media="(max-width: 371px)">
+                  <img class="gallery__slider-image" src="img/gallery-slider-24.jpg" alt="">
+                </picture>
               </a>
             </div>
 
@@ -1630,7 +1713,7 @@
         </div>
       </div>
       <div id="contacts"></div>
-    </section>
+    </section>-->
 
     <section class="contacts">
       <div class="container">
@@ -1662,7 +1745,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
   </main>
 
   <footer class="footer">

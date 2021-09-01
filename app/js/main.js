@@ -205,18 +205,32 @@ document.addEventListener('DOMContentLoaded', function () {
   let burgerButton = document.querySelector('.header__burger');
   let burgerContent = document.querySelector('.header__navbar');
   let bodyLock = document.querySelector('body');
-  let searchButton = document.querySelector('.burger__search-link');
-  let searchContent = document.querySelector('.header__search-burger');
-  let main = document.querySelector('.main');
 
   burgerButton.addEventListener('click', function () {
     burgerButton.classList.toggle('burger-active');
     burgerContent.classList.toggle('navbar-active');
     bodyLock.classList.toggle('lock');
   });
+  const searchBtn = document.querySelector('.header-top__search-btn');
+  const cancelBtn = document.querySelector('.header-top__cancel-btn');
+  const searchBox = document.querySelector('.header-top__search-box');
+  const searchInput = document.querySelector('.header-top__input');
+  const headerRow = document.querySelector('.header__row');
 
-  searchButton.addEventListener('click', function () {
-    searchContent.classList.add('search-active');
-    document.querySelector('.burger__search-input').classList.add('search-active');
-  });
+  searchBtn.onclick = () => {
+    searchBox.classList.add('active');
+    searchBtn.classList.add('active');
+    searchInput.classList.add('active');
+    cancelBtn.classList.add('active');
+    headerRow.classList.add('none');
+  }
+  cancelBtn.onclick = () => {
+    searchBox.classList.remove('active');
+    searchBtn.classList.remove('active');
+    searchInput.classList.remove('active');
+    cancelBtn.classList.remove('active');
+    setTimeout(function () {
+      headerRow.classList.remove('none');
+    }, 300);
+  }
 });
