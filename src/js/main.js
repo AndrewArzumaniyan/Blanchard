@@ -115,21 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  new Swiper('.publications__slider-container', {
-    slidesPerView: 3,
-    spaceBetween: 40,
-    slidesToScroll: 1,
-    slidesPerGroup: 3,
-    navigation: {
-      nextEl: '.slider-button-next',
-      prevEl: '.slider-button-prev',
-    },
-    pagination: {
-      el: '.slider-pagination',
-      type: 'fraction',
-    },
-  });
-
 
 
   tippy('#tooltip1', {
@@ -143,29 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
   tippy('#tooltip3', {
     content: 'В стремлении повысить качество ',
     theme: 'background',
-  });
-
-  new Swiper('.projects__slider-container', {
-    slidesPerView: 3,
-    navigation: {
-      nextEl: '.projects__slider-btn-next',
-      prevEl: '.projects__slider-btn-prev',
-    },
-    breakpoints: {
-      319: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-
-      800: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-
-      1442: {
-        slidesPerView: 3,
-      }
-    },
   });
 
   ymaps.ready(init);

@@ -438,7 +438,7 @@
   }
 }
 
-@media (max-width: 581px) {
+@media (max-width: 580px) {
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -446,6 +446,17 @@
   .header__navbar {
     padding-left: 15px;
   }
+
+  .events__slides-wrap {
+    flex-wrap: nowrap;
+  }
+  .events__slider-slide {
+    flex: 0 0 100%;
+  }
+  .more {
+    display: block;
+  }
+
   .contacts__container {
     flex-direction: column-reverse;
   }
