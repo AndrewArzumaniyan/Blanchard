@@ -25,6 +25,7 @@ $(document).ready(function () {
 
   $('.catalog').on('click', '.catalog__accordion-item a', function () {
     $('.catalog__accordion-item a').removeClass('active');
+    let link = $(this);
     $(this).addClass('active');
     let href = $(this).attr('href');
     console.log(href);
@@ -34,11 +35,15 @@ $(document).ready(function () {
       $(href).addClass('in')
     }
     setTimeout(fade, 300);
+    setTimeout(function () {
+      let elementClick = link.attr('href');
+      let destination = $(elementClick).offset().top;
+      $('html, body').animate({ scrollTop: destination }, 600);
+    }, 200)
     return false;
   });
 
   $('.events__btn').click(function (event) {
     $('.events__inner').toggleClass('active');
   });
-
 });

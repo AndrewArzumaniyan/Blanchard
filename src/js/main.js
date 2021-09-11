@@ -115,6 +115,26 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+  new Swiper('.projects__slider-container', {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: '.projects-btn-next',
+      prevEl: '.projects-btn-prev',
+    },
+    breakpoints: {
+      441: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    },
+  });
+
 
 
   tippy('#tooltip1', {

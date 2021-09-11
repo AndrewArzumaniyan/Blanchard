@@ -1469,106 +1469,146 @@
       <div id="publications"></div>
     </section>
 
-    <!-- <section class="publications">
+    <section class="publications">
       <div class="container">
-        <div class="publications__inner">
+        <div class="publications__row">
           <div class="publications__sidebar">
             <h2 class="publications__title title">Издания</h2>
-            <h4 class="publications__subtitle">Категории</h4>
-            <form action="#" class="publications__form">
-              <div class="publications__check-box">
+            <h4 class="publications__subtitle">
+              Категории
+              <span></span>
+            </h4>
+            <ul class="publications__list">
+
+              <li class="publications__item">
                 <label for="check-1" class="publications__check">
-                  <input id="check-1" type="checkbox">
+                  <input id="check-1" class="checkbox" type="checkbox">
                   Бестселлеры
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-2" class="publications__check">
-                  <input id="check-2" type="checkbox">
+                  <input id="check-2" class="checkbox" type="checkbox">
                   Искусство
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-3" class="publications__check">
-                  <input id="check-3" type="checkbox">
+                  <input id="check-3" class="checkbox" type="checkbox">
                   Архитектура
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-4" class="publications__check">
-                  <input id="check-4" type="checkbox">
+                  <input id="check-4" class="checkbox" type="checkbox">
                   Дизайн
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-5" class="publications__check">
-                  <input id="check-5" type="checkbox">
+                  <input id="check-5" class="checkbox" type="checkbox">
                   Мода
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-6" class="publications__check">
-                  <input id="check-6" type="checkbox">
+                  <input id="check-6" class="checkbox" type="checkbox">
                   Детям
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
-                <label for="check-7" class="publications__check">
-                  <input id="check-7" type="checkbox">
+              <li class="publications__item">
+                <label for="check-7" class="publications__check publications__check-br">
+                  <input id="check-7" class="checkbox" type="checkbox">
                   Художественная литература
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-8" class="publications__check">
-                  <input id="check-8" type="checkbox">
+                  <input id="check-8" class="checkbox" type="checkbox">
                   Публицистика
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-9" class="publications__check">
-                  <input id="check-9" type="checkbox">
+                  <input id="check-9" class="checkbox" type="checkbox">
                   Путеводители
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-10" class="publications__check">
-                  <input id="check-10" type="checkbox">
+                  <input id="check-10" class="checkbox" type="checkbox">
                   Философия
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-11" class="publications__check">
-                  <input id="check-11" type="checkbox">
+                  <input id="check-11" class="checkbox" type="checkbox">
                   Учебная литература
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
+              <li class="publications__item">
                 <label for="check-12" class="publications__check">
-                  <input id="check-12" type="checkbox">
+                  <input id="check-12" class="checkbox" type="checkbox">
                   Журналы и газеты
-                  <span></span>
+                  <span class="check-icon"></span>
+                  <span class="delete-button"></span>
                 </label>
+              </li>
 
-              </div>
-              <div class="publications__price-box">
-                <h5>Цена</h5>
-                <label for="" class="publications__price">
-                  <span>От</span><input type="text" value="50">
-                  <span>до</span><input type="text" value="25 000"><span>руб</span>
-                </label>
-              </div>
-            </form>
+            </ul>
+            <div class="publications__price-box">
+              <h5>Цена</h5>
+              <label for="" class="publications__price">
+                <span>От</span><input type="text" value="50">
+                <span>до</span><input type="text" value="25 000"><span>руб</span>
+              </label>
+            </div>
           </div>
 
-          <div class="publications__slider-container swiper-container">
+          <div class="slider js-slider">
             <div class="slider-navigation">
-              <div class="slider-button-prev"></div>
+              <div class="slider-btn-prev"></div>
               <div class="slider-pagination"></div>
-              <div class="slider-button-next"></div>
+              <div class="slider-btn-next"></div>
             </div>
-            <div class="publications__slider-wrapper swiper-wrapper">
-              <div class="publications__slider-slide swiper-slide">
-                <img src="images/publications-slider-1.jpg" alt="">
+            <div class="slides-wrap js-slides-wrap">
+              <div class="slide">
+                <div class="publications__slider-img">
+                  <img src="images/publications-slider-1.jpg" alt="">
+                </div>
                 <h6 class="publications__slider-title">
                   Искусство цвета
                   <span>620 руб</span>
@@ -1577,63 +1617,75 @@
                 <div class="publications__slider-btn"><a href="#" class="publications__slider-btn">Заказать</a></div>
               </div>
 
-              <div class="publications__slider-slide swiper-slide">
-                <img src="images/publications-slider-2.jpg" alt="">
+              <div class="slide">
+                <div class="publications__slider-img">
+                  <img src="images/publications-slider-2.jpg" alt="">
+                </div>
                 <h6 class="publications__slider-title">
-                  Типографика
-                  <span>2 450 руб</span>
+                  Искусство цвета
+                  <span>620 руб</span>
                 </h6>
-                <b class="publications__slider-info">Рудер, Эмиль </b>
+                <b class="publications__slider-info">Иттен, Иоханнес </b>
                 <div class="publications__slider-btn"><a href="#" class="publications__slider-btn">Заказать</a></div>
               </div>
 
-              <div class="publications__slider-slide swiper-slide">
-                <img src="images/publications-slider-3.jpg" alt="">
+              <div class="slide">
+                <div class="publications__slider-img">
+                  <img src="images/publications-slider-3.jpg" alt="">
+                </div>
                 <h6 class="publications__slider-title">
-                  Книга про буквы
-                  <span>2 200 руб</span>
+                  Искусство цвета
+                  <span>620 руб</span>
                 </h6>
-                <b class="publications__slider-info">Гордон, Юрий </b>
+                <b class="publications__slider-info">Иттен, Иоханнес </b>
                 <div class="publications__slider-btn"><a href="#" class="publications__slider-btn">Заказать</a></div>
               </div>
 
-              <div class="publications__slider-slide swiper-slide">
-                <img src="images/publications-slider-4.jpg" alt="">
+              <div class="slide">
+                <div class="publications__slider-img">
+                  <img src="images/publications-slider-4.jpg" alt="">
+                </div>
                 <h6 class="publications__slider-title">
-                  Николай Ильин
-                  <span>1 100 руб</span>
+                  Искусство цвета
+                  <span>620 руб</span>
                 </h6>
-                <b class="publications__slider-info">Кричевский, Владимир </b>
+                <b class="publications__slider-info">Иттен, Иоханнес </b>
                 <div class="publications__slider-btn"><a href="#" class="publications__slider-btn">Заказать</a></div>
               </div>
 
-              <div class="publications__slider-slide swiper-slide">
-                <img src="images/publications-slider-5.jpg" alt="">
+              <div class="slide">
+                <div class="publications__slider-img">
+                  <img src="images/publications-slider-5.jpg" alt="">
+                </div>
                 <h6 class="publications__slider-title">
-                  Модульные сетки в граф...
-                  <span>1 450 руб</span>
+                  Искусство цвета
+                  <span>620 руб</span>
                 </h6>
-                <b class="publications__slider-info">Мюллер-Брокманн, Йозеф </b>
+                <b class="publications__slider-info">Иттен, Иоханнес </b>
                 <div class="publications__slider-btn"><a href="#" class="publications__slider-btn">Заказать</a></div>
               </div>
 
-              <div class="publications__slider-slide swiper-slide">
-                <img src="images/publications-slider-6.jpg" alt="">
+              <div class="slide">
+                <div class="publications__slider-img">
+                  <img src="images/publications-slider-6.jpg" alt="">
+                </div>
                 <h6 class="publications__slider-title">
-                  Эволюция графических ст...
-                  <span>3 200 руб</span>
+                  Искусство цвета
+                  <span>620 руб</span>
                 </h6>
-                <b class="publications__slider-info">Хеллер, Чваст</b>
+                <b class="publications__slider-info">Иттен, Иоханнес </b>
                 <div class="publications__slider-btn"><a href="#" class="publications__slider-btn">Заказать</a></div>
               </div>
 
-              <div class="publications__slider-slide swiper-slide">
-                <img src="images/publications-slider-7.jpg" alt="">
+              <div class="slide">
+                <div class="publications__slider-img">
+                  <img src="images/publications-slider-7.jpg" alt="">
+                </div>
                 <h6 class="publications__slider-title">
-                  Искусство и визуальное в...
-                  <span>2 200 руб</span>
+                  Искусство цвета
+                  <span>620 руб</span>
                 </h6>
-                <b class="publications__slider-info">Арнхейм, Рудольф </b>
+                <b class="publications__slider-info">Иттен, Иоханнес </b>
                 <div class="publications__slider-btn"><a href="#" class="publications__slider-btn">Заказать</a></div>
               </div>
             </div>
@@ -1641,7 +1693,7 @@
         </div>
       </div>
       <div id="projects"></div>
-    </section> -->
+    </section>
 
     <section class="projects">
       <div class="container">
@@ -1686,11 +1738,30 @@
         </p>
         <h3 class="projects__slider-title">Партнеры проектов:</h3>
         <div class="projects__slider">
-          <div class="projects-btn-prev"></div>
-          <div class="projects-btn-next"></div>
+          <div class="projects-btn projects-btn-prev"></div>
+          <div class="projects-btn projects-btn-next"></div>
+
           <div class="projects__slider-container swiper-container">
             <div class="projects__slider-wrapper swiper-wrapper">
-              <div class="projects__slider-slide">
+              <div class="projects__slider-slide swiper-slide">
+
+              </div>
+              <div class="projects__slider-slide swiper-slide">
+
+              </div>
+              <div class="projects__slider-slide swiper-slide">
+
+              </div>
+              <div class="projects__slider-slide swiper-slide">
+
+              </div>
+              <div class="projects__slider-slide swiper-slide">
+
+              </div>
+              <div class="projects__slider-slide swiper-slide">
+
+              </div>
+              <div class="projects__slider-slide swiper-slide">
 
               </div>
             </div>
