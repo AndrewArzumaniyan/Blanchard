@@ -24,6 +24,24 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.header__link{
+  padding-left: 3px;
+  padding-right: 3px;
+  transition-property: background color;
+  transition-timing-function: ease-in-out;
+  transition-duration: .2s;
+  &:focus{
+    background: $bg-link;
+  }
+  &:hover{
+    color: #C283F3;
+  }
+  &:active{
+    color: $bg-link;
+  }
+}
+
 .header__burger,
 .header-top__search-box {
   display: none;
@@ -32,7 +50,7 @@
   display: flex;
 }
 .header__item {
-  &:not(:last-child) {
+  &:not(:nth-child(7)) {
     margin-right: 65px;
   }
 }
@@ -40,20 +58,49 @@
   display: none;
 }
 .header__sign {
-  // margin-left: calc(220 / 1600 * 100%);
+  cursor: pointer;
   margin-left: 220px;
   position: relative;
+  display: flex;
+  justify-content: center;
   a {
-    padding-left: 20px;
+    padding-left: 10px;
     position: relative;
-    &::before {
-      content: "";
-      background: url("../images/arrow-sign.svg") 0 0 / contain no-repeat;
-      width: 13px;
-      height: 13px;
+    transition: color .2s ease-in-out;
+    &:before{
+      content: '';
       position: absolute;
-      top: 4px;
-      left: 0;
+      top: -3px;
+      left: -20px;
+      bottom: -3px;
+      right: -3px;
+      z-index: -2;
+      background: transparent;
+      transition: background .2s ease-in-out;
+    }
+    &:focus{
+      &::before{
+        background: $bg-link;
+      }
+    }
+  }
+  path {
+    transition: fill .2s ease-in-out;
+  }
+  &:hover{
+    path {
+      fill: $color-link--2;
+    }
+    a {
+      color: $color-link--2;
+    }
+  }
+  &:active{
+    path {
+      fill: $color-link;
+    }
+    a {
+      color: $color-link;
     }
   }
 }
@@ -86,13 +133,24 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fff;
+    border-color: #fff;
     padding-left: 0;
     padding-bottom: 4px;
     color: #fff;
     width: 220px;
+    transition: border-color .2s ease-in-out;
     &::placeholder {
       color: #fff;
       margin: 0;
+    }
+    &:focus{
+      border-color: $color-link--2;
+    }
+    &:hover{
+      border-color: $color-link--2;
+    }
+    &:active{
+      border-color: $bg-link;
     }
   }
 }
@@ -109,7 +167,9 @@
   position: relative;
   color: #fff;
   height: 70px;
+  &:not(:last-child){
   margin-right: 85px;
+  }
 }
 
 .main__item-btn {
@@ -132,7 +192,38 @@
 .main__item-btn:focus {
   color: var(--main);
 }
-
+.main__item-btn{
+  & .main__item-heading{
+    position: relative;
+    transition-property: background color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+    &::before{
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: -28px;
+      bottom: -3px;
+      left: -3px;
+      z-index: -2;
+    }
+  }
+  &:focus{
+    & .main__item-heading{
+      &::before{
+        background: $bg-link;
+      }
+    }
+  }
+  &:hover{
+    & .main__item-heading{
+      color: $color-link;
+    }
+    &::after{
+      border-color: $color-link;
+    }
+  }
+}
 .main__item-btn::after {
   content: "";
   display: inline-block;
@@ -143,7 +234,7 @@
   margin-left: 10px;
   margin-top: -3px;
   transform: rotate(135deg);
-  transition: transform 0.5s ease;
+  transition: transform .5s ease, border-color .2s ease-in-out;
   transform-origin: center;
 }
 
