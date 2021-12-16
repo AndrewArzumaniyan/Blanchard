@@ -10,7 +10,7 @@
   background: #000;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 100000;
 }
 .header__wrapper {
   display: flex;
@@ -436,9 +436,13 @@
 }
 .hero__btn {
   font-size: 18px;
-  padding: 24.5px 35px;
+  padding: 22.5px 32px;
   background-color: #9d5cd0;
+  border: 3px solid transparent;
   border-radius: 100px;
+  &:hover{
+    border: 3px solid #D1A9F0;
+  }
 }
 //========================================================================================================================================================
 //========================================================================================================================================================
@@ -696,6 +700,81 @@
   width: auto;
   position: static;
 }
+
+
+.gallery__modals-overlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-int-out;
+}
+
+.gallery__modals-modal{
+  width: 900px;
+  height: 500px;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+  color: #333;
+  img{
+    flex: 1 0 calc(100% / 900 * 400);
+    height: 100%;
+  }
+}
+
+.gallery__modals-info{
+  flex: 1 1 calc(100% / 900 * 500 - 100);
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.gallery__modals-title{
+  @extend %os-semibold;
+  font-size: 24px;
+  line-height: 150%;
+  margin-bottom: 5px;
+}
+
+.gallery__modals-subtitle{
+  @extend %os-semibold;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.gallery__modals-add{
+  font-size: 12px;
+  color: #969696;
+  line-height: calc(100% + 100% / 16 * 12);
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.gallery__modals-text{
+  font-size: 16px;
+  line-height: calc(100% + 100% / 22 * 16);
+}
+
+.gallery__modals-overlay--visible{
+  opacity: 1;
+  visibility: visible;
+  z-index: 100000;
+  transition: all .3s ease-in-out;
+}
+
+.gallery__modals-modal--visible {
+  display: flex;
+}
 //========================================================================================================================================================
 //========================================================================================================================================================
 .catalog {
@@ -730,6 +809,23 @@
     }
   }
 }
+
+.catalog__point{
+  transition-property: filter, border;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+
+  &:focus{
+    filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+  }
+  &:hover{
+    filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+  }
+  &:active{
+    border: 2px solid #7943A4;
+  }
+}
+
 .faded {
   opacity: 0;
   transition: all 1s;
@@ -841,6 +937,13 @@
       }
     }
   }
+  &:hover{
+    color: #9D5CD0;
+    border-color: #9D5CD0;
+    span{
+      background-color: #D1A9F0;
+    }
+  }
 }
 .catalog__accordion-wrapper {
   display: none;
@@ -898,8 +1001,22 @@
 
 .catalog__accordion-item {
   a {
+    border-bottom: 1px solid transparent;
+    display: inline-block; 
+    transition-property: color, background-color, border-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+
     &.active {
       color: #7943a4;
+    }
+    &:hover{
+      color: #D1A9F0;
+      border-color: #9D5CD0;
+    }
+    &:focus{
+      color: #fff;
+      background-color:#7943A4;
     }
   }
 }
@@ -1470,9 +1587,38 @@
 }
 
 .projects__slider-slide {
-  width: calc(100% / 3 - 40px);
+  display: inline-block;
+  width:calc(100% / 3 - 40px);
   height: 200px;
-  background: #000;
+  border: 1px solid #cacaca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color .2s ease-in-out;
+  &:hover{
+    .projects__slider-image{
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+  &:focus{
+    border-color: #9D5CD0;
+  }
+  &:active{
+    border-color: #9D5CD0;
+    .projects__slider-image{
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+}
+.projects__slider-image{
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition-property: filter opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .2s;
 }
 
 //========================================================================================================================================================

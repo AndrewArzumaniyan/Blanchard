@@ -48,6 +48,16 @@ body {
   color: #fff;
 }
 
+.disable-scroll{
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 #about,
 #gallery,
 #catalog,
@@ -56,6 +66,15 @@ body {
 #contacts {
   position: absolute;
   bottom: 50px;
+}
+.about,
+.gallery,
+.catalog,
+.events,
+.publications,
+.contacts{
+  position: relative;
+  z-index: 10000;
 }
 .container {
   max-width: 1630px;
