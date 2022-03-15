@@ -85,13 +85,12 @@ window.addEventListener('resize', function () {
   checkWindowWidth(sliderParams);
 })
 
-function readMore() {
+const eventsBtn = document.querySelector('.events__button');
+
+eventsBtn.addEventListener('click', () => {
   $('.more').css('display', 'block');
   $('.events__button').css('display', 'none');
-}
-
-
-
+});
 
 
 const sliderParamsTwo = {
