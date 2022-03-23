@@ -366,6 +366,17 @@
 
   //========================================================================================================================================================
   //========================================================================================================================================================
+  .gallery__modals-modal{
+    width: 668px;
+    height: 594px;
+    img{
+      width: 301px;
+      height: 100%;
+      background-size: contain;
+    }
+  }
+  
+  
   .gallery {
     padding-bottom: 70px;
   }
@@ -439,6 +450,37 @@
   }
   .catalog__accordion-list {
     height: 450px;
+  }
+  
+  .gallery__modals-modal{
+    flex-direction: column;
+    height: 600px;
+    justify-content: start;
+    margin-right: 15px;
+    margin-left: 15px;
+    img{
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      margin-bottom: 17px;
+    }
+  }
+
+  .gallery__modals-info{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  .gallery__modals-title{
+    margin-bottom: 2px;
+  }
+
+  .gallery__modals-subtitle{
+    margin-bottom: 5px;
+  }
+
+  .gallery__modals-add{
+    margin-bottom: 12px;
   }
 }
 

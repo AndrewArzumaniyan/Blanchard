@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  var press = jQuery.Event("keypress"); 
+  press.ctrlKey = false;
+  press.which = 40;
   $('.catalog__accordion-title--active').toggleClass('active').next().slideDown(300);
   $('.catalog__accordion-title').click(function (event) {
     $('.catalog__accordion-title').removeClass('active');

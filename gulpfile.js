@@ -52,7 +52,6 @@ const stylesLibs = () => {
   return src([
     'node_modules/normalize.css/normalize.css',
     'node_modules/swiper/swiper-bundle.css',
-    'node_modules/choices.js/public/assets/styles/choices.css',
     'node_modules/simplebar/dist/simplebar.css',
   ])
     .pipe(cleanCss({
