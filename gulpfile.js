@@ -66,6 +66,7 @@ const scriptsLibs = () => {
     'node_modules/swiper/swiper-bundle.js',
     'node_modules/choices.js/public/assets/scripts/choices.js',
     'node_modules/simplebar/dist/simplebar.js',
+    'node_modules/just-validate/dist/just-validate.production.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify().on('error', notify.onError()))
